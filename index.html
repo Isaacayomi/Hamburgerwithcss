@@ -1,30 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Menu with HTML and CSS</title>
+    <title>Isaac Prime</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" sizes="32x32" href="/images/hero.417e5f04157508cad331.png" type="image/x-icon">
 </head>
+
 <body>
 
-<nav>
-    <h1>{ Pr!me :) }</h1>
-    <button class="menu">
-        <span class="top-menu"></span>
-        <span class="bottom-menu"></span>
-    </button>
+    <nav data-aos-duration="1000">
+        <h1>PR<span>!</span>ME</h1>
+        <button class="menu">
+            <span class="top-menu"></span>
+            <span class="bottom-menu"></span>
+        </button>
 
-    <ul>
-        <li class="link"><a href="another.html">Home</a></li>
-        <li class="link"><a href="#">About</a></li>
-        <li class="link"><a href="#">Services</a></li>
-         
-    </ul>
-</nav>
+        <ul>
+            <li class="link"><a href="#particles-js">Home</a></li>
+            <li class="link"><a href="#about">About</a></li>
+            <li class="link"><a href="#Projects">Projects</a></li>
+            <li class="link"><a href="#">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <main data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1000">
+       
+        <section class="hero-section">
+            <div id="particles-js">
+
+                <div class="stats-img">
+                    <img src="/images/hero.417e5f04157508cad331.png" alt="hero-img">
+                </div>
+
+                <div class="stats">
+                    <h2>Hi there</h2>
+                    <h2>I'm <span class="name">Isaac Ayomide Okunlola</span></h2>
+                    <p>Frontend Developer</p>
+                    <button>Contact Me</button>
+
+                    <div class="social-img">
+                        <a href="https://github.com/Prime-xyz"> <img src="/images/icons8-github.svg" alt="github svg"></a>
+                        <a href="#"><img src="/images/icons8-linkedin.svg" alt="linkein svg"> </a>
+                        <a href="#"><img src="/images/icons8-twitter.svg" alt="twitter svg"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me" id="about" data-aos="fade-down">
+           <div class="paragraph1">
+            <h1>&ltAbout Me/ &gt</h1>
+            <p class="paragraph">
+                I'm a creative and results-driven front-end developer with a knack for crafting intutive and visually appealing user interfaces. I have a strong background in HTML, CSS, and currently learning Javascript, and i'm always looking to expand my skill set with new technologies and tools. I'm also experienced in converting figma designs into production-ready code. <br> <br>
+
+                As a frontend Developer, i'm passionate about creating engaging user experiences that leaves a lasting impression. My goal is to collaborate with like-minded professionals and continue to grow my skills as a developer. When i'm not coding, i enjoy gaming and strengthening my typing skill.
+           </div>
+        </section>
+
+        <section class="projects-section" 
+            id="Projects" data-aos="fade-down">
+            <h1>&ltProjects/&gt</h1>
+
+            <div class="project" data-aos="fade-down">
+                <img src="/project-imgs/Prime-Clipboard-landing-page.png" alt="clipboard project">
+                <div class="project-summary">
+                    <h3>Clipboard Landing Page</h3>
+                    <p> 
+                        Clipboard Landing Page is a frontendmentor   project for beginners trying to strenthen their coding skills.Clipboard stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. 
+                        It also allows you to keep track and organize everything you copy, and to instantly access your clipboard on all your devices.
+                    </p>
+                   <div class="urls">
+                     <div class="live-site-png">
+                        <a href="https://prime-clipboard-landing-page.vercel.app/">
+                            <img src="/images/icons8-youtube-live.svg" alt="live-link">
+                            <p>Live Site</p></a>
+                    </div>
+
+                    <div class="github-png">
+                        <a href="https://github.com/Prime-xyz/Clipboard-Landing-Page">
+                            <img src="/images/icons8-github.svg" alt="githu- link">
+                            <p>Github</p></a>
+                    </div>
+                   </div>
+                   <p class="stacks">Tech Stacks: HTML, CSS</p>
+                </div>
+                
+            </div>
+
+            <div class="project p-m" data-aos="fade-down">
+                <img src="/project-imgs/Prime-Clipboard-landing-page.png" alt="clipboard project">
+                <div class="project-summary">
+                    <h3>Clipboard Landing Page</h3>
+                    <p> 
+                        Clipboard Landing Page is a frontendmentor   project for beginners trying to strenthen their coding skills.Clipboard stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. 
+                        It also allows you to keep track and organize everything you copy, and to instantly access your clipboard on all your devices.
+                    </p>
+                   <div class="urls">
+                    <div class="live-site-png">
+                        <a href="https://prime-clipboard-landing-page.vercel.app/">
+                            <img src="/images/icons8-youtube-live.svg" alt="live-link">
+                            <p>Live Site</p></a>
+                    </div>
+
+                    <div class="github-png">
+                        <a href="https://github.com/Prime-xyz/Clipboard-Landing-Page">
+                            <img src="/images/icons8-github.svg" alt="githu- link">
+                            <p>Github</p></a>
+                    </div>
+                   </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
 
 
-    
+
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
+
 </html>

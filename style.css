@@ -1,29 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+
+:root{
+    --heading-font:'Poppins', sans-serif;
+}
+
 *, :after, :before{
     padding:0;
     margin:0;
     box-sizing:border-box;
+    scroll-behavior: smooth;
+    text-decoration:none;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:var(--heading-font);
+    font-size:18px;
+    background-color:#050505;
+    /* background-color:#1F1F1F; section background-color */
 }
 
+/* NavBar Begins*/
 nav{
-    background-color:purple;
+    background:linear-gradient(rgb(31, 31, 31, 0.1), rgb(31, 31, 31, 0.7));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color:white;
-    height:70px;
+    height:80px;
     width:100%;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline:1rem;
     position:fixed;
     top:0;
     right:0;
+    z-index:999;
+    font-family:'Poppins', sans-serif;
+    padding-inline:1.8rem;
+}
+
+nav h1{
+    font-family:'Poppins', sans-serif;
+    font-size:1.8rem;
+    color:transparent;
+    background-image: linear-gradient(2deg, rgba(200, 192, 192, 0.863), black);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+nav span{
+    color:white;
 }
 
 .menu{
-    width:35px;
+    width:30px;
     height:30px;
     position:relative;
     background-color:transparent;
@@ -37,7 +66,7 @@ nav{
 .menu span{
     width:100%;
     height:7px;
-    background-color:rgb(46, 13, 48);
+    background-color:white;
     position:absolute;
     right:0;
     border-radius:5px;
@@ -45,7 +74,7 @@ nav{
 
 .menu span:nth-of-type(1){
     top:0;
-    box-shadow:0 11.4px 0 rgb(46, 13, 48);
+    box-shadow:0 11.4px 0 white;
 }
 
 .menu span:nth-of-type(2){
@@ -61,7 +90,7 @@ ul{
 
     /* the calc property is calculated using a defined height of the ul itself minus the initial height of the navbar */
     height:calc(100vh - 70px);
-    background-color:rgb(134, 51, 153);
+    background-color:rgb(29, 29, 29);
     display:flex;
     flex-direction: column;
     padding:1rem;
@@ -81,7 +110,6 @@ ul li a{
     text-decoration:none;
 }
 
-/* the ~ (tilder) selector, also called general link selector, selects the next sibling of a particular tag. */
 .menu:focus ~ ul {
     transform: translateX(0);
 }
@@ -109,7 +137,7 @@ ul li a{
         content:" ";
         width:0%;
         height:3px;
-        background-color:rgb(235, 151, 235);
+        background-color:rgb(53, 51, 51);
         margin:0;
         display:block;
         transition:.3s;
@@ -118,4 +146,276 @@ ul li a{
     ul li:hover::after{
         width:100%;
     }
+}
+/* NavBar Ends */
+
+/* Main Content Begins */
+#particles-js{
+    color:white;
+    padding-inline:2rem;
+    position:relative;
+    height:100vh;
+    width:100%;
+}
+
+.stats-img{
+    margin-top:-4rem;
+    min-width:400px;
+    height:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.stats-img img{
+    display:block;
+    width:100%;
+    height:auto;
+    filter: grayscale(1);
+    transition:.4s;
+}
+
+.stats-img img:hover{
+    filter:grayscale(0);
+}
+
+.hero-section{
+    padding-inline:1.3rem;
+}
+
+.stats{
+    line-height:2.2rem;
+    width:100%;
+    position:absolute;
+    margin-top:16rem;
+    text-align:center;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+span.name{
+    color:transparent;
+    background-image: linear-gradient(2deg, rgba(200, 192, 192, 0.863), black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size:1.9rem;
+}
+
+button{
+    padding-inline:2rem;
+    padding-block:0.8rem;
+    border-radius:5rem;
+    font-size:0.9rem;
+    transition:.4s;
+    margin-block:0.5rem;
+    border:none;
+}
+
+button:hover{
+    background-color:#1f1f1f;
+    cursor:pointer;
+    border:none;
+    color:white;
+}
+
+.social-img{
+    width:100%;
+    height:auto;
+    transition:.4s;
+    margin-top:0.7rem;
+}
+
+.social-img img{
+    width:2rem;
+    margin-inline:0.3rem;
+    transition:.4s;
+}
+
+.social-img img:hover{
+    transform: translateY(-0.4rem);
+}
+
+/* ABOUT SECTION */
+.about-me{
+    margin-inline:2rem;
+    margin-top:1rem;
+    scroll-margin-top: 7rem;
+}
+
+.about-me h1, .about-me p{
+    color:rgba(248, 247, 247, 0.818);
+    padding-inline:1rem;
+    padding-block:0.5rem;
+}
+
+.paragraph1{
+    line-height:1.6rem;
+    padding:0.56rem;
+    font-size:1rem;
+    background-color:#1f1f1f4d;
+    border-radius:1.2rem;
+    border:1px solid rgba(255, 255, 255, 0.43);
+    animation-name:borderchange;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes borderchange{
+    0%{
+        border:1px solid rgba(255, 255, 255, 0.43);
+        border-radius:1rem;
+    }
+
+    50%{
+        border:1px solid  rgb(60, 59, 59);
+        border-radius:1rem;
+    }
+
+    100%{
+        border:1px solid white;
+        border-radius:1rem;
+    }
+}
+
+.paragraph1 h1, .projects-section h1{
+    color:transparent;
+    background-image: linear-gradient(4deg, rgba(200, 192, 192, 0.863), rgb(23, 22, 22));
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align:center;
+    animation-name:slideIn;
+    animation-duration: 3s;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes slideIn{
+    0% {
+            transform: translatex(-90%); 
+        }
+
+      100%{
+        transform:translate(0);
+      }
+}
+
+.paragraph1 p, .project-summary p{
+    color:transparent;
+    background-image: linear-gradient(4deg, rgba(200, 192, 192, 0.863), rgb(60, 59, 59));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* PROJECTS SECTION */
+.projects-section{
+    scroll-margin-top: 7rem;
+    background-color:#1f1f1f;
+    padding:1.6rem;
+    border-radius:1.2rem;
+}
+
+.projects-section{
+    margin-inline:2rem;
+    margin-top:3rem;
+}
+
+.p-m{
+    /* border:1px solid white; */
+    margin-top:-2rem;
+}
+
+.project{
+    min-width:200px;
+    height:auto;
+    margin-bottom:5rem;
+    margin-inline:auto;
+}
+
+.project img{
+    display:block;
+    width:100%;
+    height:auto;
+    border:none;
+    border-radius:1rem;
+    margin-top:1rem;
+    transition:.4s;
+}
+
+.project img:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.project-summary{
+    margin-top:0.8rem;
+    line-height:1.6rem;
+    font-weight:lighter;
+    animation-name:borderchange;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.project-summary h3{
+    margin-inline:0.9rem;
+    margin-top:1rem;
+    color:transparent;
+    background-image: linear-gradient(4deg, rgba(200, 192, 192, 0.863), rgb(23, 22, 22));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.project-summary p{
+    margin-inline:0.9rem;
+    margin-top:0.8rem;
+}
+
+.paragraph1 p, .project-summary p{
+    animation-name:colorChange;
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+}
+
+@keyframes colorChange{
+    0%{
+        color:transparent;
+        background-image: linear-gradient(4deg, rgba(200, 192, 192, 0.863), rgb(60, 59, 59));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    100%{
+        color:transparent;
+        background-image: linear-gradient(to left, rgba(200, 192, 192, 0.863), rgb(113, 101, 101));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+}
+
+.urls{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-bottom:0.9rem;
+}
+
+.live-site-png img{
+    width:40px;
+    height:auto;
+    margin-inline:auto;
+    margin-bottom:-1rem;
+}
+
+.github-png img{
+    width:40px;
+    height:auto;
+    margin-inline:auto;
+    margin-bottom:-1rem;
+}
+
+p.stacks{
+    margin-top:-0.2rem;
 }
